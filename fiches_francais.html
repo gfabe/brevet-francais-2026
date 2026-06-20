@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Fiches de révision — Français Brevet 2026</title>
+<style>
+  :root{
+    --bleu:#2563eb; --bleu-d:#1e3a8a; --bleu-l:#eaf1fe;
+    --vert:#059669; --vert-l:#e6f7f0;
+    --orange:#ea580c; --orange-l:#fdeede;
+    --violet:#7c3aed; --violet-l:#f1e9fd;
+    --rose:#db2777; --rose-l:#fce7f1;
+    --rouge:#dc2626; --rouge-l:#fdeaea;
+    --encre:#0f172a; --gris:#64748b; --trait:#e2e8f0;
+    --air:#f59e0b; --air-d:#b45309;
+  }
+  *{box-sizing:border-box;}
+  @page{ size:A4; margin:11mm 11mm 12mm 11mm; }
+  html,body{margin:0;padding:0;}
+  body{ font-family:"Inter","SF Pro Display","Helvetica Neue",Arial,sans-serif;
+    color:var(--encre); font-size:10.4px; line-height:1.42;
+    -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  .sheet{ page-break-after:always; position:relative; }
+  .sheet:last-child{ page-break-after:auto; }
+
+  /* COVER */
+  .cover{ height:265mm; border-radius:20px; color:#fff; padding:32px 30px; position:relative; overflow:hidden;
+    background:radial-gradient(circle at 88% 8%,rgba(245,158,11,.5) 0%,transparent 42%),
+               radial-gradient(circle at 6% 92%,rgba(124,58,237,.45) 0%,transparent 40%),
+               linear-gradient(150deg,#0f172a 0%,#1e293b 55%,#3b1d6b 100%);
+    display:flex; flex-direction:column;}
+  .cover .pill{ display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.25); padding:5px 8px 5px 6px; border-radius:999px; font-size:12px; font-weight:600;
+    align-self:flex-start;}
+  .cover .pill .logo{ width:26px;height:26px;border-radius:50%;object-fit:cover;object-position:50% 22%;
+    border:2px solid var(--air); box-shadow:0 0 0 1px rgba(0,0,0,.3);}
+  .cover .top{ display:flex; gap:22px; align-items:flex-start; }
+  .cover .ttxt{ flex:1; }
+  .cover h1{ font-size:50px; margin:16px 0 2px; font-weight:800; letter-spacing:-1px; line-height:1;}
+  .cover h1 .ac{ background:linear-gradient(90deg,#fbbf24,#f472b6); -webkit-background-clip:text; background-clip:text; color:transparent;}
+  .cover .sub{ font-size:16px; opacity:.85; font-weight:500;}
+  .cover .year-row{ display:flex; align-items:center; gap:16px; margin:18px 0 6px;}
+  .cover .year{ font-size:78px; font-weight:800; letter-spacing:1px; line-height:1;
+    background:linear-gradient(120deg,#fbbf24,#fb923c,#f472b6); -webkit-background-clip:text; background-clip:text; color:transparent;}
+  .cover .badges{ display:flex; flex-direction:column; gap:6px;}
+  .cover .badge{ background:rgba(255,255,255,.1); border-radius:9px; padding:6px 12px; font-size:11px;}
+  .cover .badge b{ color:#fbbf24;}
+  .cover .heroimg{ flex:0 0 178px; }
+  .cover .heroimg img{ width:178px; height:268px; object-fit:cover; border-radius:16px;
+    border:2px solid rgba(245,158,11,.6); box-shadow:0 10px 30px rgba(0,0,0,.45);}
+  .cover .heroimg .cred{ text-align:center; font-size:10px; font-weight:700; color:var(--air); margin-top:6px; letter-spacing:1px;}
+  .cover .toc{ margin-top:20px; display:grid; grid-template-columns:1fr 1fr; gap:8px;}
+  .cover .toc a.it{ text-decoration:none; color:#fff;}
+  .cover .toc .it{ background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12);
+    border-radius:11px; padding:9px 12px; font-size:11.3px; display:flex; align-items:center; gap:9px;}
+  .cover .toc .n{ width:21px;height:21px;border-radius:6px;background:linear-gradient(135deg,#f59e0b,#7c3aed);
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:11px;flex:0 0 auto;}
+  .cover .foot{ margin-top:auto; font-size:11px; opacity:.72; border-top:1px solid rgba(255,255,255,.15); padding-top:11px;}
+
+  /* PAGE HEADER */
+  .ph{ border-radius:13px; padding:11px 16px; margin:0 0 11px; color:#fff;
+    display:flex; align-items:center; gap:13px; box-shadow:0 3px 9px rgba(15,23,42,.16);}
+  .ph .n{ width:34px;height:34px;border-radius:10px;background:rgba(255,255,255,.2);
+    display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;flex:0 0 auto;}
+  .ph h2{ margin:0; font-size:18px; font-weight:800; letter-spacing:-.3px;}
+  .ph .tag{ font-size:10px; opacity:.9; font-weight:500;}
+  .h-bleu{background:linear-gradient(100deg,#2563eb,#3b82f6);}
+  .h-vert{background:linear-gradient(100deg,#059669,#10b981);}
+  .h-orange{background:linear-gradient(100deg,#ea580c,#f97316);}
+  .h-violet{background:linear-gradient(100deg,#7c3aed,#a855f7);}
+  .h-rose{background:linear-gradient(100deg,#db2777,#ec4899);}
+  .h-air{background:linear-gradient(100deg,#b45309,#f59e0b);}
+
+  .cols{ column-count:2; column-gap:12px; }
+  .card{ break-inside:avoid; border-radius:11px; padding:0 0 8px; margin:0 0 10px; background:#fff;
+    border:1px solid var(--trait); box-shadow:0 1px 4px rgba(15,23,42,.06); overflow:hidden;}
+  .card .ch{ display:flex; align-items:center; gap:7px; padding:6px 10px; font-size:11.4px; font-weight:700;}
+  .card .ch .ic{ width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;flex:0 0 auto;color:#fff;}
+  .card .body{ padding:2px 11px 0;}
+  .c-bleu .ch{background:var(--bleu-l);color:var(--bleu-d);} .c-bleu .ch .ic{background:var(--bleu);}
+  .c-vert .ch{background:var(--vert-l);color:#065f46;} .c-vert .ch .ic{background:var(--vert);}
+  .c-orange .ch{background:var(--orange-l);color:#9a3412;} .c-orange .ch .ic{background:var(--orange);}
+  .c-violet .ch{background:var(--violet-l);color:#5b21b6;} .c-violet .ch .ic{background:var(--violet);}
+  .c-rose .ch{background:var(--rose-l);color:#9d174d;} .c-rose .ch .ic{background:var(--rose);}
+  .c-rouge .ch{background:var(--rouge-l);color:#991b1b;} .c-rouge .ch .ic{background:var(--rouge);}
+
+  ul{ margin:3px 0; padding-left:16px;} li{ margin:1.5px 0;} p{ margin:3px 0;}
+  .def{ background:linear-gradient(180deg,#f8fafc,#eef2ff); border:1px solid #dbe4f3; border-radius:8px;
+    padding:5px 9px; margin:5px 0; font-size:10.2px; color:var(--bleu-d);}
+  .def b{ color:var(--bleu-d);}
+  .ex{ background:#f8fafc; border-radius:7px; padding:4px 8px; margin:4px 0; font-size:9.9px; border-left:3px solid #cbd5e1;}
+  .ex b{ color:var(--bleu); } .ex i{ color:#475569;}
+  .piege{ background:var(--rouge-l); border-radius:7px; padding:4px 8px; margin:5px 0; font-size:9.6px; color:#991b1b; border-left:3px solid var(--rouge);}
+  .astuce{ background:var(--vert-l); border-radius:7px; padding:4px 8px; margin:5px 0; font-size:9.6px; color:#065f46; border-left:3px solid var(--vert);}
+  table.mini{ border-collapse:collapse; width:100%; font-size:9.3px; margin:4px 0;}
+  table.mini td,table.mini th{ border:1px solid var(--trait); padding:2px 5px; text-align:left;}
+  table.mini th{ background:var(--bleu-l); color:var(--bleu-d); text-align:center;}
+  .cap{ font-size:8.8px; color:var(--gris); text-align:center; margin-top:1px;}
+
+  /* méthodes */
+  .mexo{ break-inside:avoid; border:1px solid var(--trait); border-radius:12px; margin:0 0 11px; overflow:hidden;
+    box-shadow:0 1px 4px rgba(15,23,42,.06); background:#fff;}
+  .mexo .mh{ background:linear-gradient(100deg,#1e293b,#334155); color:#fff; padding:6px 12px; font-size:11.5px; font-weight:700;
+    display:flex; align-items:center; gap:8px;}
+  .mexo .mh .lvl{ margin-left:auto; font-size:9px; background:rgba(255,255,255,.18); padding:2px 8px; border-radius:999px; font-weight:600;}
+  .mexo .mb{ padding:7px 12px;}
+  .enonce{ background:#eff6ff; border-left:3px solid var(--bleu); border-radius:6px; padding:5px 9px; font-size:10px; margin:0 0 6px;}
+  .step{ display:flex; gap:8px; margin:4px 0; font-size:9.8px;}
+  .step .sn{ flex:0 0 auto; width:17px;height:17px;border-radius:50%;background:var(--violet);color:#fff;
+    font-size:9.5px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+  .concl{ background:var(--vert-l); border-radius:6px; padding:4px 9px; font-size:9.6px; color:#065f46; margin-top:5px; border-left:3px solid var(--vert);}
+
+  /* planning */
+  .plan{ display:flex; flex-direction:column; gap:8px;}
+  .day{ break-inside:avoid; display:flex; gap:11px; align-items:stretch; }
+  .day .pin{ flex:0 0 auto; width:62px; border-radius:10px; color:#fff; display:flex; flex-direction:column;
+    align-items:center; justify-content:center; font-weight:800; padding:7px 4px; text-align:center;}
+  .day .pin .big{ font-size:15px; line-height:1;} .day .pin .sm{ font-size:8px; font-weight:600; opacity:.9; margin-top:2px;}
+  .day .dc{ flex:1; border:1px solid var(--trait); border-radius:10px; padding:6px 11px; background:#fff; box-shadow:0 1px 3px rgba(15,23,42,.05);}
+  .day .dc b{ font-size:11px;} .day .dc .meta{ font-size:9px; color:var(--gris);} .day .dc ul{ margin:3px 0 0;}
+  .pin.j1{background:linear-gradient(135deg,#2563eb,#3b82f6);} .pin.j2{background:linear-gradient(135deg,#7c3aed,#a855f7);}
+  .pin.j3{background:linear-gradient(135deg,#059669,#10b981);} .pin.j4{background:linear-gradient(135deg,#ea580c,#f97316);}
+  .pin.j5{background:linear-gradient(135deg,#db2777,#ec4899);} .pin.jd{background:linear-gradient(135deg,#dc2626,#f43f5e);}
+
+  /* qcm */
+  .qgrid{ column-count:2; column-gap:13px;}
+  .q{ break-inside:avoid; border:1px solid var(--trait); border-radius:10px; padding:7px 11px; margin:0 0 8px; background:#fff; box-shadow:0 1px 3px rgba(15,23,42,.05);}
+  .q .qq{ font-weight:700; font-size:10.1px; margin-bottom:3px;}
+  .q .qq .qn{ display:inline-flex; width:16px;height:16px;border-radius:50%;background:var(--violet);color:#fff;
+    font-size:9px;align-items:center;justify-content:center;margin-right:5px;font-weight:700;}
+  .q .opt{ font-size:9.5px; margin:1.5px 0;}
+  .corr{ margin-top:9px; border-radius:10px; padding:8px 12px; background:linear-gradient(120deg,#064e3b,#065f46); color:#fff;}
+  .corr h3{ margin:0 0 4px; font-size:11px; color:#6ee7b7;}
+  .corr .row{ font-size:9.5px; columns:2; column-gap:14px;}
+  .corr .row span{ display:inline-block; margin:1px 0;} .corr b{ color:#fff;}
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<section class="sheet">
+  <div class="cover">
+    <div class="top">
+      <div class="ttxt">
+        <span class="pill"><img class="logo" src="airhead-portrait.jpg" alt="Airhead">🦸 Coaché par <b>The Airhead</b> · #AIRHEAD4LIFE</span>
+        <h1>Français <span class="ac">en fiches</span></h1>
+        <div class="sub">Tout le programme pour assurer à l'épreuve</div>
+        <div class="year-row">
+          <div class="year">2026</div>
+          <div class="badges">
+            <div class="badge">⏱️ Épreuve en <b>2 parties</b> · 3 h au total</div>
+            <div class="badge">✍️ Grammaire · <b>dictée</b> · compréhension</div>
+            <div class="badge">📝 <b>Rédaction</b> (réflexion ou invention)</div>
+          </div>
+        </div>
+      </div>
+      <div class="heroimg">
+        <img src="airhead-poster.jpg" alt="The Airhead">
+        <div class="cred">TON COACH ANTI-FAUTES</div>
+      </div>
+    </div>
+    <div class="toc">
+      <a class="it" href="#f1"><span class="n">1</span>Grammaire : nature &amp; fonction</a>
+      <a class="it" href="#f2"><span class="n">2</span>Conjugaison &amp; valeurs des temps</a>
+      <a class="it" href="#f3"><span class="n">3</span>Orthographe &amp; homophones</a>
+      <a class="it" href="#f4"><span class="n">4</span>Figures de style</a>
+      <a class="it" href="#f5"><span class="n">5</span>Registres &amp; tonalités</a>
+      <a class="it" href="#f6"><span class="n">6</span>Analyse du récit</a>
+      <a class="it" href="#f7"><span class="n">7</span>Lexique &amp; vocabulaire</a>
+      <a class="it" href="#f8"><span class="n">8</span>Poésie &amp; versification</a>
+      <a class="it" href="#meth" style="grid-column:1/3;background:rgba(251,191,36,.16);border-color:rgba(251,191,36,.4);"><span class="n" style="background:linear-gradient(135deg,#fbbf24,#f472b6)">★</span>Méthodes : compréhension · dictée · rédaction</a>
+      <a class="it" href="#plan" style="background:rgba(96,165,250,.16);border-color:rgba(96,165,250,.4);"><span class="n" style="background:linear-gradient(135deg,#22d3ee,#3b82f6)">📅</span>Planning J-15 → jour J</a>
+      <a class="it" href="#qcm" style="background:rgba(244,114,182,.16);border-color:rgba(244,114,182,.4);"><span class="n" style="background:linear-gradient(135deg,#f472b6,#a855f7)">❓</span>QCM d'auto-évaluation</a>
+    </div>
+    <div class="foot">💡 Sommaire cliquable · Une fiche = un thème · Définitions, exemples, astuces ✔ et pièges ⚠ à éviter.</div>
+  </div>
+</section>
+
+<!-- ============ 1. GRAMMAIRE ============ -->
+<section class="sheet" id="f1">
+  <div class="ph h-bleu"><div class="n">1</div><div><h2>Grammaire : nature &amp; fonction</h2>
+    <div class="tag">classes de mots · fonctions · propositions</div></div></div>
+  <div class="cols">
+    <div class="card c-bleu"><div class="ch"><span class="ic">🏷️</span>Les classes grammaticales (nature)</div><div class="body">
+      <p><b>Variables :</b> nom, déterminant, adjectif, pronom, verbe.</p>
+      <p><b>Invariables :</b> adverbe, préposition, conjonction, interjection.</p>
+      <div class="astuce">✔ La <b>nature</b> = ce qu'un mot <i>est</i> (toujours la même). La <b>fonction</b> = le <i>rôle</i> qu'il joue dans la phrase (varie).</div>
+    </div></div>
+    <div class="card c-vert"><div class="ch"><span class="ic">🎯</span>Les fonctions essentielles</div><div class="body">
+      <ul><li><b>Sujet</b> : qui fait l'action ? (« <i>Léa</i> court »)</li>
+        <li><b>COD</b> : qui ? quoi ? sans préposition</li>
+        <li><b>COI</b> : à qui ? à quoi ? (préposition)</li>
+        <li><b>Attribut du sujet</b> : après être, sembler, paraître…</li>
+        <li><b>Épithète</b> : adjectif collé au nom</li>
+        <li><b>CC</b> : temps, lieu, manière, cause…</li></ul>
+    </div></div>
+    <div class="card c-orange"><div class="ch"><span class="ic">🧱</span>Phrase simple / complexe</div><div class="body">
+      <p><b>1 verbe conjugué = 1 proposition.</b></p>
+      <ul><li><b>Simple</b> : un seul verbe conjugué</li><li><b>Complexe</b> : plusieurs propositions</li></ul>
+      <div class="ex"><b>Liens :</b> juxtaposition ( , ; : ), coordination (<i>mais, ou, et, donc, or, ni, car</i>), subordination.</div>
+    </div></div>
+    <div class="card c-violet"><div class="ch"><span class="ic">🔗</span>Les propositions subordonnées</div><div class="body">
+      <table class="mini"><tr><th>Type</th><th>Introduite par</th></tr>
+        <tr><td><b>Relative</b> (complète un nom = antécédent)</td><td>qui, que, dont, où…</td></tr>
+        <tr><td><b>Conjonctive</b> COD</td><td>que</td></tr>
+        <tr><td><b>Circonstancielle</b></td><td>quand, parce que, si, pour que…</td></tr></table>
+      <div class="ex"><b>Ex :</b> « Le livre <i>que tu lis</i> » → relative, COD de l'antécédent <i>livre</i>.</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ============ 2. CONJUGAISON ============ -->
+<section class="sheet" id="f2">
+  <div class="ph h-vert"><div class="n">2</div><div><h2>Conjugaison &amp; valeurs des temps</h2>
+    <div class="tag">modes · temps · valeurs dans le récit</div></div></div>
+  <div class="cols">
+    <div class="card c-vert"><div class="ch"><span class="ic">🎭</span>Les modes</div><div class="body">
+      <ul><li><b>Indicatif</b> : le réel</li><li><b>Subjonctif</b> : souhait, doute, ordre (après <i>que</i>, <i>il faut que</i>)</li>
+        <li><b>Conditionnel</b> : hypothèse, politesse</li><li><b>Impératif</b> : ordre</li>
+        <li>Non personnels : infinitif, participe, gérondif</li></ul>
+    </div></div>
+    <div class="card c-bleu"><div class="ch"><span class="ic">⏳</span>Imparfait vs passé simple</div><div class="body">
+      <table class="mini"><tr><th>Imparfait</th><th>Passé simple</th></tr>
+        <tr><td>décor, description</td><td>action soudaine</td></tr>
+        <tr><td>habitude, durée</td><td>1ᵉʳ plan du récit</td></tr>
+        <tr><td>arrière-plan</td><td>fait ponctuel</td></tr></table>
+      <div class="ex"><b>Ex :</b> « Il <i>dormait</i> (imp.) quand le téléphone <i>sonna</i> (p.s.). »</div>
+    </div></div>
+    <div class="card c-orange"><div class="ch"><span class="ic">🕐</span>Valeurs du présent</div><div class="body">
+      <ul><li><b>D'énonciation</b> : au moment où l'on parle</li><li><b>De vérité générale</b> : « L'eau <i>bout</i> à 100 °C »</li>
+        <li><b>De narration</b> : rend un récit vivant</li><li><b>D'habitude</b> : « Chaque jour, il <i>marche</i>. »</li></ul>
+    </div></div>
+    <div class="card c-violet"><div class="ch"><span class="ic">🔮</span>Subjonctif &amp; conditionnel</div><div class="body">
+      <p><b>Subjonctif</b> : « Il faut que tu <i>viennes</i> », « Je veux qu'il <i>parte</i> ».</p>
+      <p><b>Conditionnel</b> : hypothèse (« Si j'avais le temps, je <i>viendrais</i> »), futur dans le passé, politesse.</p>
+      <div class="piege">⚠ « Si » n'est <b>jamais</b> suivi du conditionnel : <i>Si j'avais</i> (imparfait) → je viendrais.</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ============ 3. ORTHOGRAPHE ============ -->
+<section class="sheet" id="f3">
+  <div class="ph h-orange"><div class="n">3</div><div><h2>Orthographe &amp; homophones</h2>
+    <div class="tag">accords · participe passé · homophones (spécial dictée)</div></div></div>
+  <div class="cols">
+    <div class="card c-bleu"><div class="ch"><span class="ic">🔁</span>Accord du participe passé</div><div class="body">
+      <ul><li>avec <b>être</b> → s'accorde avec le <b>sujet</b> (« Elles sont <i>parties</i> »)</li>
+        <li>avec <b>avoir</b> → s'accorde avec le <b>COD si placé avant</b> (« les fleurs qu'il a <i>cueillies</i> »)</li>
+        <li>avoir sans COD avant → <b>invariable</b> (« Elles ont <i>mangé</i> »)</li></ul>
+      <div class="piege">⚠ Cherche le COD : « Les pommes <i>que</i> j'ai <b>mangées</b> » (COD = que = pommes, avant → accord).</div>
+    </div></div>
+    <div class="card c-vert"><div class="ch"><span class="ic">✅</span>Accords de base</div><div class="body">
+      <ul><li><b>Sujet-verbe</b> : le verbe s'accorde avec le sujet (attention au sujet inversé / éloigné)</li>
+        <li><b>Adjectif</b> : genre + nombre du nom (« une histoire <i>passionnante</i> »)</li></ul>
+    </div></div>
+    <div class="card c-orange"><div class="ch"><span class="ic">👯</span>Homophones — le top du Brevet</div><div class="body">
+      <table class="mini"><tr><th>Mot</th><th>Astuce de remplacement</th></tr>
+        <tr><td><b>a / à</b></td><td>a = <i>avait</i> ; à = préposition</td></tr>
+        <tr><td><b>et / est</b></td><td>est = <i>était</i></td></tr>
+        <tr><td><b>son / sont</b></td><td>sont = <i>étaient</i></td></tr>
+        <tr><td><b>on / ont</b></td><td>ont = <i>avaient</i></td></tr>
+        <tr><td><b>ce / se</b></td><td>se = devant un verbe</td></tr>
+        <tr><td><b>ces / ses</b></td><td>ces = ceux-là ; ses = les siens</td></tr>
+        <tr><td><b>leur / leurs</b></td><td>leur (verbe) invariable</td></tr>
+        <tr><td><b>ou / où</b></td><td>ou = <i>ou bien</i></td></tr></table>
+    </div></div>
+    <div class="card c-violet"><div class="ch"><span class="ic">🧐</span>Pièges fréquents</div><div class="body">
+      <ul><li><b>c'est / s'est</b> : s'est + verbe pronominal</li><li><b>quel(le) / qu'elle</b> : qu'elle = que + elle</li>
+        <li><b>peu / peut / peux</b> : peut = <i>pouvait</i></li><li><b>la / là / l'a</b> : l'a = le/la + a</li></ul>
+      <div class="astuce">✔ En dictée : à chaque homophone, fais le <b>test de remplacement</b> dans ta tête.</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ============ 4. FIGURES DE STYLE ============ -->
+<section class="sheet" id="f4">
+  <div class="ph h-violet"><div class="n">4</div><div><h2>Les figures de style</h2>
+    <div class="tag">images · oppositions · insistance · sonorités</div></div></div>
+  <div class="cols">
+    <div class="card c-bleu"><div class="ch"><span class="ic">🖼️</span>Images</div><div class="body">
+      <ul><li><b>Comparaison</b> : outil (<i>comme, tel, semblable à</i>). « fort <i>comme</i> un lion »</li>
+        <li><b>Métaphore</b> : image <b>sans</b> outil. « cet homme est un lion »</li>
+        <li><b>Personnification</b> : une chose agit comme un humain</li>
+        <li><b>Allégorie</b> : idée abstraite rendue concrète</li></ul>
+    </div></div>
+    <div class="card c-orange"><div class="ch"><span class="ic">📈</span>Exagération &amp; atténuation</div><div class="body">
+      <ul><li><b>Hyperbole</b> : exagération (« mourir de faim »)</li>
+        <li><b>Litote</b> : dire moins pour suggérer plus (« il n'est pas méchant »)</li>
+        <li><b>Euphémisme</b> : adoucir (« il nous a quittés »)</li>
+        <li><b>Gradation</b> : intensité croissante</li></ul>
+    </div></div>
+    <div class="card c-rose"><div class="ch"><span class="ic">⚔️</span>Oppositions</div><div class="body">
+      <ul><li><b>Antithèse</b> : deux idées opposées (« la vie / la mort »)</li>
+        <li><b>Oxymore</b> : deux mots contradictoires côte à côte (« un silence assourdissant »)</li>
+        <li><b>Chiasme</b> : croisement (AB / BA)</li></ul>
+    </div></div>
+    <div class="card c-vert"><div class="ch"><span class="ic">🔂</span>Insistance &amp; substitution</div><div class="body">
+      <ul><li><b>Anaphore</b> : même mot répété en début de phrases/vers</li>
+        <li><b>Énumération / accumulation</b></li>
+        <li><b>Métonymie</b> : la partie pour le tout (« boire un verre »)</li>
+        <li><b>Périphrase</b> : « la Ville Lumière » = Paris</li></ul>
+    </div></div>
+    <div class="card c-violet"><div class="ch"><span class="ic">🎵</span>Sonorités</div><div class="body">
+      <ul><li><b>Allitération</b> : répétition de <b>consonnes</b> (« <i>Pour qui sont ces serpents…</i> » → s)</li>
+        <li><b>Assonance</b> : répétition de <b>voyelles</b></li></ul>
+      <div class="astuce">✔ Pour l'effet : nomme la figure <b>puis</b> explique ce qu'elle produit (insister, choquer, embellir…).</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ============ 5. REGISTRES ============ -->
+<section class="sheet" id="f5">
+  <div class="ph h-rose"><div class="n">5</div><div><h2>Les registres (tonalités)</h2>
+    <div class="tag">l'émotion que le texte cherche à provoquer</div></div></div>
+  <div class="cols">
+    <div class="card c-bleu"><div class="ch"><span class="ic">😀</span>Faire rire / sourire</div><div class="body">
+      <ul><li><b>Comique</b> : amuser (gestes, mots, situations, caractères)</li>
+        <li><b>Ironique</b> : dire le contraire de ce qu'on pense</li>
+        <li><b>Satirique</b> : se moquer pour critiquer</li></ul>
+    </div></div>
+    <div class="card c-violet"><div class="ch"><span class="ic">😢</span>Émouvoir</div><div class="body">
+      <ul><li><b>Pathétique</b> : susciter la pitié, l'émotion</li>
+        <li><b>Tragique</b> : destin fatal, mort inévitable</li>
+        <li><b>Lyrique</b> : exprimer ses sentiments (je, amour, nature)</li></ul>
+    </div></div>
+    <div class="card c-orange"><div class="ch"><span class="ic">⚡</span>Impressionner / convaincre</div><div class="body">
+      <ul><li><b>Épique</b> : amplifier l'exploit, le héros</li>
+        <li><b>Fantastique</b> : doute entre réel et surnaturel</li>
+        <li><b>Polémique</b> : attaquer vivement une idée</li>
+        <li><b>Didactique</b> : instruire, expliquer</li></ul>
+    </div></div>
+    <div class="card c-vert"><div class="ch"><span class="ic">🔎</span>Comment l'identifier ?</div><div class="body">
+      <p>Repère le <b>champ lexical</b> dominant, la <b>ponctuation</b> (! ? …), les <b>figures</b> et le <b>thème</b>.</p>
+      <div class="ex"><b>Ex :</b> beaucoup de « ! », d'hyperboles et un héros invincible → registre <b>épique</b>.</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ============ 6. ANALYSE DU RÉCIT ============ -->
+<section class="sheet" id="f6">
+  <div class="ph h-bleu"><div class="n">6</div><div><h2>Analyse du récit</h2>
+    <div class="tag">narrateur · paroles rapportées · structure</div></div></div>
+  <div class="cols">
+    <div class="card c-bleu"><div class="ch"><span class="ic">👁️</span>Narrateur &amp; points de vue</div><div class="body">
+      <ul><li><b>Interne</b> : on voit par les yeux d'un personnage (ses pensées)</li>
+        <li><b>Externe</b> : caméra neutre, on ne sait rien des pensées</li>
+        <li><b>Omniscient (zéro)</b> : le narrateur sait tout, partout</li></ul>
+      <div class="ex"><b>Narrateur</b> « je » (interne au récit) ≠ « il » (extérieur).</div>
+    </div></div>
+    <div class="card c-vert"><div class="ch"><span class="ic">💬</span>Les paroles rapportées</div><div class="body">
+      <table class="mini"><tr><th>Type</th><th>Indice</th></tr>
+        <tr><td><b>Direct</b></td><td>guillemets, tirets, « il dit : »</td></tr>
+        <tr><td><b>Indirect</b></td><td>subordonnée (« il dit qu'il… »)</td></tr>
+        <tr><td><b>Indirect libre</b></td><td>fondu dans le récit, sans « que »</td></tr></table>
+    </div></div>
+    <div class="card c-orange"><div class="ch"><span class="ic">🪜</span>Le schéma narratif</div><div class="body">
+      <ol style="padding-left:18px;margin:3px 0;"><li>Situation initiale</li><li>Élément perturbateur</li><li>Péripéties</li><li>Dénouement</li><li>Situation finale</li></ol>
+    </div></div>
+    <div class="card c-violet"><div class="ch"><span class="ic">⏩</span>Le rythme du récit</div><div class="body">
+      <ul><li><b>Scène</b> : on prend le temps (dialogue)</li><li><b>Sommaire</b> : on résume vite</li>
+        <li><b>Ellipse</b> : on saute un moment</li><li><b>Pause</b> : description</li>
+        <li><b>Analepse</b> = retour en arrière · <b>Prolepse</b> = anticipation</li></ul>
+    </div></div>
+  </div>
+</section>
+
+<!-- ============ 7. LEXIQUE ============ -->
+<section class="sheet" id="f7">
+  <div class="ph h-orange"><div class="n">7</div><div><h2>Lexique &amp; vocabulaire</h2>
+    <div class="tag">sens · niveaux de langue · formation des mots</div></div></div>
+  <div class="cols">
+    <div class="card c-bleu"><div class="ch"><span class="ic">🌾</span>Champ lexical</div><div class="body">
+      <p>Ensemble de mots se rapportant à un <b>même thème</b>.</p>
+      <div class="ex"><b>Ex :</b> mer, vague, écume, marée, large → champ lexical de la <i>mer</i>.</div>
+    </div></div>
+    <div class="card c-vert"><div class="ch"><span class="ic">🎭</span>Sens &amp; connotation</div><div class="body">
+      <ul><li><b>Dénotation</b> : sens neutre du dictionnaire</li><li><b>Connotation</b> : ce que le mot évoque (positif/négatif)</li>
+        <li><b>Sens propre</b> / <b>sens figuré</b></li></ul>
+      <div class="ex"><b>Ex :</b> « renard » → propre (animal) / figuré (personne rusée).</div>
+    </div></div>
+    <div class="card c-orange"><div class="ch"><span class="ic">🎚️</span>Niveaux de langue</div><div class="body">
+      <table class="mini"><tr><th>Niveau</th><th>Exemple</th></tr>
+        <tr><td>Familier</td><td>bagnole, fric</td></tr>
+        <tr><td>Courant</td><td>voiture, argent</td></tr>
+        <tr><td>Soutenu</td><td>automobile, fortune</td></tr></table>
+    </div></div>
+    <div class="card c-violet"><div class="ch"><span class="ic">🧬</span>Formation &amp; familles de mots</div><div class="body">
+      <ul><li><b>Préfixe</b> + radical + <b>suffixe</b> (in-/-able)</li>
+        <li><b>Synonymes / antonymes</b></li>
+        <li><b>Homonymes</b> (verre/vert) · <b>paronymes</b> (conjecture/conjoncture)</li>
+        <li>Racines : <i>graph</i> (écrire), <i>chrono</i> (temps), <i>bio</i> (vie)…</li></ul>
+    </div></div>
+  </div>
+</section>
+
+<!-- ============ 8. POÉSIE ============ -->
+<section class="sheet" id="f8">
+  <div class="ph h-violet"><div class="n">8</div><div><h2>Poésie &amp; versification</h2>
+    <div class="tag">compter les syllabes · rimes · strophes · rythme</div></div></div>
+  <div class="cols">
+    <div class="card c-bleu"><div class="ch"><span class="ic">🔢</span>Compter les syllabes</div><div class="body">
+      <ul><li><b>Alexandrin</b> = 12 syllabes · <b>décasyllabe</b> = 10 · <b>octosyllabe</b> = 8</li>
+        <li>Le <b>-e muet</b> compte sauf en fin de vers ou devant une voyelle</li></ul>
+      <div class="ex"><b>Ex :</b> « Je / fais / sou / vent / ce / rê / ve / é / tran / ge / et / pé / né / trant » → on découpe syllabe par syllabe.</div>
+    </div></div>
+    <div class="card c-orange"><div class="ch"><span class="ic">🎶</span>Les rimes</div><div class="body">
+      <p><b>Disposition :</b></p>
+      <ul><li>Plates / suivies : AABB</li><li>Croisées : ABAB</li><li>Embrassées : ABBA</li></ul>
+      <p><b>Qualité :</b> pauvre (1 son), suffisante (2), riche (3+).</p>
+    </div></div>
+    <div class="card c-vert"><div class="ch"><span class="ic">🧱</span>Les strophes</div><div class="body">
+      <ul><li>Distique (2 vers) · tercet (3) · quatrain (4)</li>
+        <li><b>Sonnet</b> : 2 quatrains + 2 tercets (14 vers)</li></ul>
+    </div></div>
+    <div class="card c-violet"><div class="ch"><span class="ic">🎼</span>Le rythme</div><div class="body">
+      <ul><li><b>Césure</b> : coupe au milieu de l'alexandrin (6//6), les deux moitiés = <b>hémistiches</b></li>
+        <li><b>Enjambement</b> : la phrase déborde sur le vers suivant</li>
+        <li><b>Rejet</b> / <b>contre-rejet</b> : un mot isolé en début/fin de vers</li></ul>
+      <div class="astuce">✔ Relie toujours la <b>forme</b> (rythme, sonorité) au <b>sens</b> (émotion, idée).</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ============ MÉTHODES ============ -->
+<section class="sheet" id="meth">
+  <div class="ph h-air"><div class="n">★</div><div><h2>Méthodes-types — les 3 épreuves</h2>
+    <div class="tag">compréhension · dictée · rédaction</div></div></div>
+
+  <div class="mexo"><div class="mh">🔎 Répondre à une question de compréhension<span class="lvl">Méthode</span></div><div class="mb">
+    <div class="enonce"><b>Règle d'or :</b> une réponse = <b>j'affirme + je cite + j'explique</b>.</div>
+    <div class="step"><div class="sn">1</div><div>Je réponds à la question par une phrase claire (je reprends les mots de la question).</div></div>
+    <div class="step"><div class="sn">2</div><div>Je <b>cite le texte entre guillemets</b> (« … » ligne X) pour prouver.</div></div>
+    <div class="step"><div class="sn">3</div><div>J'<b>interprète</b> : j'explique ce que la citation montre, je nomme la figure/le procédé.</div></div>
+    <div class="concl">✔ Jamais de citation seule, jamais d'affirmation sans preuve. Cite <b>court et précis</b>.</div>
+  </div></div>
+
+  <div class="mexo"><div class="mh">✍️ Réussir la dictée<span class="lvl">Méthode</span></div><div class="mb">
+    <div class="step"><div class="sn">1</div><div>Je repère les <b>sujets</b> et j'accorde chaque <b>verbe</b>.</div></div>
+    <div class="step"><div class="sn">2</div><div>À chaque <b>homophone</b> (a/à, et/est, ses/ces…), je fais le test de remplacement.</div></div>
+    <div class="step"><div class="sn">3</div><div>Je vérifie les <b>participes passés</b> (être → sujet ; avoir → COD avant ?).</div></div>
+    <div class="concl">✔ À la relecture finale : accords dans les groupes nominaux (déterminant + nom + adjectif).</div>
+  </div></div>
+
+  <div class="mexo"><div class="mh">📝 La rédaction — sujet de réflexion<span class="lvl">Méthode</span></div><div class="mb">
+    <div class="enonce"><b>But :</b> défendre un point de vue de façon organisée (≈ 2 pages).</div>
+    <div class="step"><div class="sn">1</div><div><b>Introduction</b> : j'amène le sujet + j'annonce ma position.</div></div>
+    <div class="step"><div class="sn">2</div><div><b>Développement</b> : 2-3 arguments, chacun avec un <b>exemple</b> (lecture, actualité, vécu).</div></div>
+    <div class="step"><div class="sn">3</div><div>Je relie avec des <b>connecteurs</b> : d'abord, de plus, cependant, en effet, par conséquent…</div></div>
+    <div class="concl">✔ <b>Conclusion</b> : je résume et j'élargis. Soigne l'orthographe : elle est notée !</div>
+  </div></div>
+
+  <div class="mexo"><div class="mh">🎨 La rédaction — sujet d'invention<span class="lvl">Méthode</span></div><div class="mb">
+    <div class="step"><div class="sn">1</div><div>Je respecte <b>toutes les consignes</b> (qui, où, quand, type de texte, registre).</div></div>
+    <div class="step"><div class="sn">2</div><div>J'assure la <b>cohérence</b> avec le texte de départ (mêmes personnages, même temps du récit).</div></div>
+    <div class="step"><div class="sn">3</div><div>J'enrichis : descriptions, dialogues bien ponctués, figures de style, vocabulaire précis.</div></div>
+    <div class="concl">✔ Je relis pour la <b>ponctuation du dialogue</b> et les temps (imparfait / passé simple).</div>
+  </div></div>
+</section>
+
+<!-- ============ PLANNING ============ -->
+<section class="sheet" id="plan">
+  <div class="ph h-bleu"><div class="n">📅</div><div><h2>Planning de révision — J-15 → jour J</h2>
+    <div class="tag">~40 min/jour · lis, puis teste-toi</div></div></div>
+  <div class="plan">
+    <div class="day"><div class="pin j1"><span class="big">J-15</span><span class="sm">à J-13</span></div>
+      <div class="dc"><b>🏷️ Grammaire &amp; conjugaison</b> <span class="meta">fiches 1 &amp; 2</span>
+        <ul><li>Nature/fonction, propositions, valeurs des temps</li><li><b>Test :</b> analyser 5 phrases (nature + fonction)</li></ul></div></div>
+    <div class="day"><div class="pin j2"><span class="big">J-12</span><span class="sm">à J-10</span></div>
+      <div class="dc"><b>✍️ Orthographe (spécial dictée)</b> <span class="meta">fiche 3</span>
+        <ul><li>Participe passé, homophones, accords</li><li><b>Test :</b> refaire une dictée d'annale et compter ses fautes</li></ul></div></div>
+    <div class="day"><div class="pin j3"><span class="big">J-9</span><span class="sm">à J-7</span></div>
+      <div class="dc"><b>🖼️ Figures &amp; registres</b> <span class="meta">fiches 4 &amp; 5</span>
+        <ul><li>Mémoriser les figures + savoir nommer un registre</li><li><b>Test :</b> trouver 5 figures dans un poème</li></ul></div></div>
+    <div class="day"><div class="pin j4"><span class="big">J-6</span><span class="sm">à J-4</span></div>
+      <div class="dc"><b>👁️ Analyse du récit &amp; lexique</b> <span class="meta">fiches 6 &amp; 7</span>
+        <ul><li>Points de vue, paroles rapportées, champ lexical</li><li><b>Test :</b> répondre à 3 questions sur un texte (méthode citer + interpréter)</li></ul></div></div>
+    <div class="day"><div class="pin j5"><span class="big">J-3</span><span class="sm">à J-2</span></div>
+      <div class="dc"><b>📝 Poésie &amp; rédaction</b> <span class="meta">fiches 8 &amp; méthodes</span>
+        <ul><li>Versification + s'entraîner à un plan de rédaction</li><li><b>Test :</b> le <b>QCM</b> (page suivante) en entier</li></ul></div></div>
+    <div class="day"><div class="pin jd"><span class="big">J-1</span><span class="sm">veille</span></div>
+      <div class="dc"><b>😌 Relâche &amp; antisèche</b> <span class="meta">document « Antisèche »</span>
+        <ul><li>Relis l'antisèche + le tableau des homophones</li><li>Prépare stylos, brouillon · couche-toi tôt 🌙</li></ul></div></div>
+  </div>
+  <div class="astuce" style="margin-top:10px;">✔ <b>Le secret :</b> relire ne suffit pas. Après chaque fiche, <b>cache et récite</b>, puis applique sur un texte ou une dictée.</div>
+</section>
+
+<!-- ============ QCM ============ -->
+<section class="sheet" id="qcm">
+  <div class="ph h-rose"><div class="n">❓</div><div><h2>QCM d'auto-évaluation — 12 questions</h2>
+    <div class="tag">entoure ta réponse · corrigé en bas de page</div></div></div>
+  <div class="qgrid">
+    <div class="q"><div class="qq"><span class="qn">1</span>« mais, ou, et, donc, or, ni, car » sont des conjonctions de :</div>
+      <div class="opt">a) subordination &nbsp; b) coordination &nbsp; c) préposition</div></div>
+    <div class="q"><div class="qq"><span class="qn">2</span>Dans « le livre que tu lis », « que » introduit une proposition :</div>
+      <div class="opt">a) relative &nbsp; b) circonstancielle &nbsp; c) interrogative</div></div>
+    <div class="q"><div class="qq"><span class="qn">3</span>« Elles sont parties » : le participe s'accorde avec :</div>
+      <div class="opt">a) le COD &nbsp; b) le sujet &nbsp; c) rien</div></div>
+    <div class="q"><div class="qq"><span class="qn">4</span>« fort comme un lion » est :</div>
+      <div class="opt">a) une métaphore &nbsp; b) une comparaison &nbsp; c) une litote</div></div>
+    <div class="q"><div class="qq"><span class="qn">5</span>« un silence assourdissant » est :</div>
+      <div class="opt">a) un oxymore &nbsp; b) une hyperbole &nbsp; c) une anaphore</div></div>
+    <div class="q"><div class="qq"><span class="qn">6</span>Répétition de consonnes (« ses serpents sifflent ») :</div>
+      <div class="opt">a) assonance &nbsp; b) allitération &nbsp; c) gradation</div></div>
+    <div class="q"><div class="qq"><span class="qn">7</span>Un récit qui veut nous faire pitié est de registre :</div>
+      <div class="opt">a) comique &nbsp; b) épique &nbsp; c) pathétique</div></div>
+    <div class="q"><div class="qq"><span class="qn">8</span>« Il dit qu'il viendrait » est du discours :</div>
+      <div class="opt">a) direct &nbsp; b) indirect &nbsp; c) indirect libre</div></div>
+    <div class="q"><div class="qq"><span class="qn">9</span>Un alexandrin compte :</div>
+      <div class="opt">a) 10 syllabes &nbsp; b) 12 syllabes &nbsp; c) 14 syllabes</div></div>
+    <div class="q"><div class="qq"><span class="qn">10</span>Des rimes ABAB sont :</div>
+      <div class="opt">a) plates &nbsp; b) croisées &nbsp; c) embrassées</div></div>
+    <div class="q"><div class="qq"><span class="qn">11</span>« bagnole » appartient au niveau de langue :</div>
+      <div class="opt">a) familier &nbsp; b) courant &nbsp; c) soutenu</div></div>
+    <div class="q"><div class="qq"><span class="qn">12</span>« Si j'avais le temps, je … » se poursuit par :</div>
+      <div class="opt">a) je viendrais &nbsp; b) je viendrai &nbsp; c) je vins</div></div>
+  </div>
+  <div class="corr"><h3>✅ Corrigé</h3>
+    <div class="row">
+      <span><b>1.</b> b (coordination)</span>
+      <span><b>2.</b> a (relative)</span>
+      <span><b>3.</b> b (sujet, avec être)</span>
+      <span><b>4.</b> b (comparaison : « comme »)</span>
+      <span><b>5.</b> a (oxymore)</span>
+      <span><b>6.</b> b (allitération)</span>
+      <span><b>7.</b> c (pathétique)</span>
+      <span><b>8.</b> b (indirect : « que »)</span>
+      <span><b>9.</b> b (12 syllabes)</span>
+      <span><b>10.</b> b (croisées)</span>
+      <span><b>11.</b> a (familier)</span>
+      <span><b>12.</b> a (conditionnel après « si » + imparfait)</span>
+    </div>
+  </div>
+  <div class="astuce" style="margin-top:9px;">✔ <b>10–12 :</b> au top 🎉 · <b>6–9 :</b> revois les fiches concernées · <b>&lt;6 :</b> reprends le planning depuis J-15. #AIRHEAD4LIFE</div>
+</section>
+
+</body>
+</html>
