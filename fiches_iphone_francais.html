@@ -108,12 +108,15 @@
 #mq label.right::after{content:" \2713";font-weight:900;color:#16a34a}
 #mq .q.bd label.pick{background:rgba(239,68,68,.16)!important;border-color:rgba(239,68,68,.55)!important}
 #mq .q.bd label.pick::after{content:" \2717";font-weight:900;color:#dc2626}
+#mq .q.locked label{cursor:default}
+#mq .q.locked label:not(.pick):not(.right){opacity:.55}
 #mq .q.bd{animation:qshake .4s}
 @keyframes qshake{10%,90%{transform:translateX(-2px)}30%,70%{transform:translateX(3px)}50%{transform:translateX(-3px)}}
 #mq .verdict{display:none;margin-top:5px;font-size:12px;font-weight:800}
 #mq .q.gd .verdict,#mq .q.bd .verdict{display:block}
 #mq .q.gd .verdict{color:#16a34a}
 #mq .q.bd .verdict{color:#dc2626}
+#mq .verdict .ex{font-weight:600;opacity:.9}
 .confetti-wrap{position:fixed;inset:0;pointer-events:none;z-index:99999;overflow:hidden}
 .confetti-wrap i{position:absolute;top:-14px;width:9px;height:14px;border-radius:2px;opacity:.95;animation:cfall linear forwards}
 @keyframes cfall{to{transform:translateY(108vh) rotate(620deg);opacity:.9}}
@@ -279,38 +282,38 @@
 </div></details>
 
 <details id="mq" class="s-rose"><summary><span class="ico">❓</span>QCM d'auto-évaluation<span class="cv">›</span></summary><div class="sec">
-  <div class="q"><div class="qq"><span class="qn">1</span>« mais, ou, et, donc, or, ni, car » sont des conjonctions de :</div><label><input type="radio" name="q1">subordination</label><label><input type="radio" name="q1" data-ok="1">coordination</label><label><input type="radio" name="q1">préposition</label></div>
-  <div class="q"><div class="qq"><span class="qn">2</span>Dans « le livre que tu lis », « que » introduit une proposition :</div><label><input type="radio" name="q2" data-ok="1">relative</label><label><input type="radio" name="q2">circonstancielle</label><label><input type="radio" name="q2">interrogative</label></div>
-  <div class="q"><div class="qq"><span class="qn">3</span>« Elles sont parties » : le participe s'accorde avec :</div><label><input type="radio" name="q3">le COD</label><label><input type="radio" name="q3" data-ok="1">le sujet</label><label><input type="radio" name="q3">rien</label></div>
-  <div class="q"><div class="qq"><span class="qn">4</span>« fort comme un lion » est :</div><label><input type="radio" name="q4">une métaphore</label><label><input type="radio" name="q4" data-ok="1">une comparaison</label><label><input type="radio" name="q4">une litote</label></div>
-  <div class="q"><div class="qq"><span class="qn">5</span>« un silence assourdissant » est :</div><label><input type="radio" name="q5" data-ok="1">un oxymore</label><label><input type="radio" name="q5">une hyperbole</label><label><input type="radio" name="q5">une anaphore</label></div>
-  <div class="q"><div class="qq"><span class="qn">6</span>Répétition de consonnes (« ses serpents sifflent ») :</div><label><input type="radio" name="q6">assonance</label><label><input type="radio" name="q6" data-ok="1">allitération</label><label><input type="radio" name="q6">gradation</label></div>
-  <div class="q"><div class="qq"><span class="qn">7</span>Un récit qui veut nous faire pitié est de registre :</div><label><input type="radio" name="q7">comique</label><label><input type="radio" name="q7">épique</label><label><input type="radio" name="q7" data-ok="1">pathétique</label></div>
-  <div class="q"><div class="qq"><span class="qn">8</span>« Il dit qu'il viendrait » est du discours :</div><label><input type="radio" name="q8">direct</label><label><input type="radio" name="q8" data-ok="1">indirect</label><label><input type="radio" name="q8">indirect libre</label></div>
-  <div class="q"><div class="qq"><span class="qn">9</span>Un alexandrin compte :</div><label><input type="radio" name="q9">10 syllabes</label><label><input type="radio" name="q9" data-ok="1">12 syllabes</label><label><input type="radio" name="q9">14 syllabes</label></div>
-  <div class="q"><div class="qq"><span class="qn">10</span>Des rimes ABAB sont :</div><label><input type="radio" name="q10">plates</label><label><input type="radio" name="q10" data-ok="1">croisées</label><label><input type="radio" name="q10">embrassées</label></div>
-  <div class="q"><div class="qq"><span class="qn">11</span>« bagnole » appartient au niveau de langue :</div><label><input type="radio" name="q11" data-ok="1">familier</label><label><input type="radio" name="q11">courant</label><label><input type="radio" name="q11">soutenu</label></div>
-  <div class="q"><div class="qq"><span class="qn">12</span>« Si j'avais le temps, je … » se poursuit par :</div><label><input type="radio" name="q12" data-ok="1">je viendrais</label><label><input type="radio" name="q12">je viendrai</label><label><input type="radio" name="q12">je vins</label></div>
-  <div class="q"><div class="qq"><span class="qn">13</span>« Pierre mange une pomme » : « une pomme » est :</div><label><input type="radio" name="q13" data-ok="1">COD</label><label><input type="radio" name="q13">COI</label><label><input type="radio" name="q13">sujet</label></div>
-  <div class="q"><div class="qq"><span class="qn">14</span>« finir » au présent, 1ʳᵉ pers. sing. :</div><label><input type="radio" name="q14" data-ok="1">je finis</label><label><input type="radio" name="q14">je finit</label><label><input type="radio" name="q14">je finie</label></div>
-  <div class="q"><div class="qq"><span class="qn">15</span>« Quelle belle journée ! » est une phrase :</div><label><input type="radio" name="q15">déclarative</label><label><input type="radio" name="q15" data-ok="1">exclamative</label><label><input type="radio" name="q15">interrogative</label></div>
-  <div class="q"><div class="qq"><span class="qn">16</span>« ne … jamais » est une négation :</div><label><input type="radio" name="q16" data-ok="1">totale</label><label><input type="radio" name="q16">partielle</label><label><input type="radio" name="q16">restrictive</label></div>
-  <div class="q"><div class="qq"><span class="qn">17</span>Passé simple de « être » (il) :</div><label><input type="radio" name="q17" data-ok="1">il fut</label><label><input type="radio" name="q17">il fût</label><label><input type="radio" name="q17">il était</label></div>
-  <div class="q"><div class="qq"><span class="qn">18</span>« un pauvre homme » / « un homme pauvre » : l'adjectif change de :</div><label><input type="radio" name="q18">genre</label><label><input type="radio" name="q18" data-ok="1">sens selon la place</label><label><input type="radio" name="q18">nombre</label></div>
-  <div class="q"><div class="qq"><span class="qn">19</span>« tic-tac », « cocorico » sont des :</div><label><input type="radio" name="q19" data-ok="1">onomatopées</label><label><input type="radio" name="q19">périphrases</label><label><input type="radio" name="q19">euphémismes</label></div>
-  <div class="q"><div class="qq"><span class="qn">20</span>Un narrateur qui dit « je » adopte un point de vue :</div><label><input type="radio" name="q20" data-ok="1">interne</label><label><input type="radio" name="q20">externe</label><label><input type="radio" name="q20">omniscient</label></div>
-  <div class="q"><div class="qq"><span class="qn">21</span>« le roi des animaux » (le lion) est une :</div><label><input type="radio" name="q21">métaphore</label><label><input type="radio" name="q21" data-ok="1">périphrase</label><label><input type="radio" name="q21">antithèse</label></div>
-  <div class="q"><div class="qq"><span class="qn">22</span>« si tu m'invites » dans « Je viendrai si tu m'invites » exprime :</div><label><input type="radio" name="q22" data-ok="1">la condition</label><label><input type="radio" name="q22">la cause</label><label><input type="radio" name="q22">le but</label></div>
-  <div class="q"><div class="qq"><span class="qn">23</span>Aux temps composés, « tomber » se conjugue avec :</div><label><input type="radio" name="q23">avoir</label><label><input type="radio" name="q23" data-ok="1">être</label><label><input type="radio" name="q23">les deux</label></div>
-  <div class="q"><div class="qq"><span class="qn">24</span>« Vivre puis mourir » dans un vers est une :</div><label><input type="radio" name="q24">gradation</label><label><input type="radio" name="q24" data-ok="1">antithèse</label><label><input type="radio" name="q24">anaphore</label></div>
-  <div class="q"><div class="qq"><span class="qn">25</span>🔥 « Les fleurs que j'ai cueillies » : « cueillies » s'accorde avec :</div><label><input type="radio" name="q25">le sujet « j' »</label><label><input type="radio" name="q25" data-ok="1">le COD « que » (=fleurs) placé avant</label><label><input type="radio" name="q25">rien</label></div>
-  <div class="q"><div class="qq"><span class="qn">26</span>🔥 « Quoique » (en un seul mot) signifie :</div><label><input type="radio" name="q26" data-ok="1">bien que</label><label><input type="radio" name="q26">quelle que soit la chose</label><label><input type="radio" name="q26">pourquoi</label></div>
-  <div class="q"><div class="qq"><span class="qn">27</span>🔥 Subjonctif présent de « faire » (que je …) :</div><label><input type="radio" name="q27" data-ok="1">que je fasse</label><label><input type="radio" name="q27">que je fais</label><label><input type="radio" name="q27">que je ferai</label></div>
-  <div class="q"><div class="qq"><span class="qn">28</span>🔥 « Ô temps, suspends ton vol ! » : figure dominante :</div><label><input type="radio" name="q28" data-ok="1">apostrophe + personnification</label><label><input type="radio" name="q28">litote</label><label><input type="radio" name="q28">métonymie</label></div>
-  <div class="q"><div class="qq"><span class="qn">29</span>🔥 Un sonnet est composé de :</div><label><input type="radio" name="q29" data-ok="1">2 quatrains + 2 tercets</label><label><input type="radio" name="q29">3 quatrains + 1 distique</label><label><input type="radio" name="q29">4 tercets</label></div>
-  <div class="q"><div class="qq"><span class="qn">30</span>🔥 « Il n'est pas inintéressant » est :</div><label><input type="radio" name="q30" data-ok="1">une litote</label><label><input type="radio" name="q30">une hyperbole</label><label><input type="radio" name="q30">un pléonasme</label></div>
-  <div class="q"><div class="qq"><span class="qn">31</span>🔥 « Boire un verre » (le contenu, pas le verre) est :</div><label><input type="radio" name="q31" data-ok="1">une métonymie</label><label><input type="radio" name="q31">une métaphore</label><label><input type="radio" name="q31">une antiphrase</label></div>
-  <div class="q"><div class="qq"><span class="qn">32</span>🔥 Le mode dans « Qu'il parte ! » est :</div><label><input type="radio" name="q32">l'impératif</label><label><input type="radio" name="q32" data-ok="1">le subjonctif (ordre à la 3ᵉ pers.)</label><label><input type="radio" name="q32">l'indicatif</label></div>
+  <div class="q" data-exp="coordination"><div class="qq"><span class="qn">1</span>« mais, ou, et, donc, or, ni, car » sont des conjonctions de :</div><label><input type="radio" name="q1">subordination</label><label><input type="radio" name="q1" data-ok="1">coordination</label><label><input type="radio" name="q1">préposition</label></div>
+  <div class="q" data-exp="relative"><div class="qq"><span class="qn">2</span>Dans « le livre que tu lis », « que » introduit une proposition :</div><label><input type="radio" name="q2" data-ok="1">relative</label><label><input type="radio" name="q2">circonstancielle</label><label><input type="radio" name="q2">interrogative</label></div>
+  <div class="q" data-exp="sujet, avec être"><div class="qq"><span class="qn">3</span>« Elles sont parties » : le participe s'accorde avec :</div><label><input type="radio" name="q3">le COD</label><label><input type="radio" name="q3" data-ok="1">le sujet</label><label><input type="radio" name="q3">rien</label></div>
+  <div class="q" data-exp="comparaison : « comme »"><div class="qq"><span class="qn">4</span>« fort comme un lion » est :</div><label><input type="radio" name="q4">une métaphore</label><label><input type="radio" name="q4" data-ok="1">une comparaison</label><label><input type="radio" name="q4">une litote</label></div>
+  <div class="q" data-exp="oxymore"><div class="qq"><span class="qn">5</span>« un silence assourdissant » est :</div><label><input type="radio" name="q5" data-ok="1">un oxymore</label><label><input type="radio" name="q5">une hyperbole</label><label><input type="radio" name="q5">une anaphore</label></div>
+  <div class="q" data-exp="allitération"><div class="qq"><span class="qn">6</span>Répétition de consonnes (« ses serpents sifflent ») :</div><label><input type="radio" name="q6">assonance</label><label><input type="radio" name="q6" data-ok="1">allitération</label><label><input type="radio" name="q6">gradation</label></div>
+  <div class="q" data-exp="pathétique"><div class="qq"><span class="qn">7</span>Un récit qui veut nous faire pitié est de registre :</div><label><input type="radio" name="q7">comique</label><label><input type="radio" name="q7">épique</label><label><input type="radio" name="q7" data-ok="1">pathétique</label></div>
+  <div class="q" data-exp="indirect : « que »"><div class="qq"><span class="qn">8</span>« Il dit qu'il viendrait » est du discours :</div><label><input type="radio" name="q8">direct</label><label><input type="radio" name="q8" data-ok="1">indirect</label><label><input type="radio" name="q8">indirect libre</label></div>
+  <div class="q" data-exp="12 syllabes"><div class="qq"><span class="qn">9</span>Un alexandrin compte :</div><label><input type="radio" name="q9">10 syllabes</label><label><input type="radio" name="q9" data-ok="1">12 syllabes</label><label><input type="radio" name="q9">14 syllabes</label></div>
+  <div class="q" data-exp="croisées"><div class="qq"><span class="qn">10</span>Des rimes ABAB sont :</div><label><input type="radio" name="q10">plates</label><label><input type="radio" name="q10" data-ok="1">croisées</label><label><input type="radio" name="q10">embrassées</label></div>
+  <div class="q" data-exp="familier"><div class="qq"><span class="qn">11</span>« bagnole » appartient au niveau de langue :</div><label><input type="radio" name="q11" data-ok="1">familier</label><label><input type="radio" name="q11">courant</label><label><input type="radio" name="q11">soutenu</label></div>
+  <div class="q" data-exp="conditionnel après « si » + imparfait"><div class="qq"><span class="qn">12</span>« Si j'avais le temps, je … » se poursuit par :</div><label><input type="radio" name="q12" data-ok="1">je viendrais</label><label><input type="radio" name="q12">je viendrai</label><label><input type="radio" name="q12">je vins</label></div>
+  <div class="q" data-exp="COD"><div class="qq"><span class="qn">13</span>« Pierre mange une pomme » : « une pomme » est :</div><label><input type="radio" name="q13" data-ok="1">COD</label><label><input type="radio" name="q13">COI</label><label><input type="radio" name="q13">sujet</label></div>
+  <div class="q" data-exp="je finis"><div class="qq"><span class="qn">14</span>« finir » au présent, 1ʳᵉ pers. sing. :</div><label><input type="radio" name="q14" data-ok="1">je finis</label><label><input type="radio" name="q14">je finit</label><label><input type="radio" name="q14">je finie</label></div>
+  <div class="q" data-exp="exclamative"><div class="qq"><span class="qn">15</span>« Quelle belle journée ! » est une phrase :</div><label><input type="radio" name="q15">déclarative</label><label><input type="radio" name="q15" data-ok="1">exclamative</label><label><input type="radio" name="q15">interrogative</label></div>
+  <div class="q" data-exp="totale"><div class="qq"><span class="qn">16</span>« ne … jamais » est une négation :</div><label><input type="radio" name="q16" data-ok="1">totale</label><label><input type="radio" name="q16">partielle</label><label><input type="radio" name="q16">restrictive</label></div>
+  <div class="q" data-exp="il fut"><div class="qq"><span class="qn">17</span>Passé simple de « être » (il) :</div><label><input type="radio" name="q17" data-ok="1">il fut</label><label><input type="radio" name="q17">il fût</label><label><input type="radio" name="q17">il était</label></div>
+  <div class="q" data-exp="sens selon la place"><div class="qq"><span class="qn">18</span>« un pauvre homme » / « un homme pauvre » : l'adjectif change de :</div><label><input type="radio" name="q18">genre</label><label><input type="radio" name="q18" data-ok="1">sens selon la place</label><label><input type="radio" name="q18">nombre</label></div>
+  <div class="q" data-exp="onomatopées"><div class="qq"><span class="qn">19</span>« tic-tac », « cocorico » sont des :</div><label><input type="radio" name="q19" data-ok="1">onomatopées</label><label><input type="radio" name="q19">périphrases</label><label><input type="radio" name="q19">euphémismes</label></div>
+  <div class="q" data-exp="interne"><div class="qq"><span class="qn">20</span>Un narrateur qui dit « je » adopte un point de vue :</div><label><input type="radio" name="q20" data-ok="1">interne</label><label><input type="radio" name="q20">externe</label><label><input type="radio" name="q20">omniscient</label></div>
+  <div class="q" data-exp="périphrase"><div class="qq"><span class="qn">21</span>« le roi des animaux » (le lion) est une :</div><label><input type="radio" name="q21">métaphore</label><label><input type="radio" name="q21" data-ok="1">périphrase</label><label><input type="radio" name="q21">antithèse</label></div>
+  <div class="q" data-exp="condition"><div class="qq"><span class="qn">22</span>« si tu m'invites » dans « Je viendrai si tu m'invites » exprime :</div><label><input type="radio" name="q22" data-ok="1">la condition</label><label><input type="radio" name="q22">la cause</label><label><input type="radio" name="q22">le but</label></div>
+  <div class="q" data-exp="auxiliaire être"><div class="qq"><span class="qn">23</span>Aux temps composés, « tomber » se conjugue avec :</div><label><input type="radio" name="q23">avoir</label><label><input type="radio" name="q23" data-ok="1">être</label><label><input type="radio" name="q23">les deux</label></div>
+  <div class="q" data-exp="antithèse"><div class="qq"><span class="qn">24</span>« Vivre puis mourir » dans un vers est une :</div><label><input type="radio" name="q24">gradation</label><label><input type="radio" name="q24" data-ok="1">antithèse</label><label><input type="radio" name="q24">anaphore</label></div>
+  <div class="q" data-exp="COD placé avant + avoir"><div class="qq"><span class="qn">25</span>🔥 « Les fleurs que j'ai cueillies » : « cueillies » s'accorde avec :</div><label><input type="radio" name="q25">le sujet « j' »</label><label><input type="radio" name="q25" data-ok="1">le COD « que » (=fleurs) placé avant</label><label><input type="radio" name="q25">rien</label></div>
+  <div class="q" data-exp="bien que (concession)"><div class="qq"><span class="qn">26</span>🔥 « Quoique » (en un seul mot) signifie :</div><label><input type="radio" name="q26" data-ok="1">bien que</label><label><input type="radio" name="q26">quelle que soit la chose</label><label><input type="radio" name="q26">pourquoi</label></div>
+  <div class="q" data-exp="que je fasse"><div class="qq"><span class="qn">27</span>🔥 Subjonctif présent de « faire » (que je …) :</div><label><input type="radio" name="q27" data-ok="1">que je fasse</label><label><input type="radio" name="q27">que je fais</label><label><input type="radio" name="q27">que je ferai</label></div>
+  <div class="q" data-exp="apostrophe/personnification"><div class="qq"><span class="qn">28</span>🔥 « Ô temps, suspends ton vol ! » : figure dominante :</div><label><input type="radio" name="q28" data-ok="1">apostrophe + personnification</label><label><input type="radio" name="q28">litote</label><label><input type="radio" name="q28">métonymie</label></div>
+  <div class="q" data-exp="2 quatrains + 2 tercets"><div class="qq"><span class="qn">29</span>🔥 Un sonnet est composé de :</div><label><input type="radio" name="q29" data-ok="1">2 quatrains + 2 tercets</label><label><input type="radio" name="q29">3 quatrains + 1 distique</label><label><input type="radio" name="q29">4 tercets</label></div>
+  <div class="q" data-exp="litote"><div class="qq"><span class="qn">30</span>🔥 « Il n'est pas inintéressant » est :</div><label><input type="radio" name="q30" data-ok="1">une litote</label><label><input type="radio" name="q30">une hyperbole</label><label><input type="radio" name="q30">un pléonasme</label></div>
+  <div class="q" data-exp="métonymie"><div class="qq"><span class="qn">31</span>🔥 « Boire un verre » (le contenu, pas le verre) est :</div><label><input type="radio" name="q31" data-ok="1">une métonymie</label><label><input type="radio" name="q31">une métaphore</label><label><input type="radio" name="q31">une antiphrase</label></div>
+  <div class="q" data-exp="subjonctif"><div class="qq"><span class="qn">32</span>🔥 Le mode dans « Qu'il parte ! » est :</div><label><input type="radio" name="q32">l'impératif</label><label><input type="radio" name="q32" data-ok="1">le subjonctif (ordre à la 3ᵉ pers.)</label><label><input type="radio" name="q32">l'indicatif</label></div>
 
   <div class="qscore" id="qstat">Réponds aux questions pour gagner des badges ! <span id="qnums"></span>
     <div class="bar"><i id="qbar"></i></div></div>
@@ -349,7 +352,6 @@
  var KEY='brevet_best_'+location.pathname;
  var best=parseInt(localStorage.getItem(KEY)||'0',10)||0;
  var muted=(localStorage.getItem('brevet_muted')==='1');
- // ---------- son (Web Audio, sans fichier) ----------
  var AC=null;
  function ac(){ if(!AC){try{AC=new (window.AudioContext||window.webkitAudioContext)();}catch(e){AC=null;}} if(AC&&AC.state==='suspended'){AC.resume();} return AC; }
  function buzz(){ if(muted)return; var c=ac(); if(!c)return; var t=c.currentTime;
@@ -362,7 +364,6 @@
   [[660,0],[990,0.085]].forEach(function(n){ var o=c.createOscillator(); o.type='sine'; o.frequency.value=n[0];
    var g=c.createGain(); g.gain.setValueAtTime(0.0001,t+n[1]); g.gain.exponentialRampToValueAtTime(0.22,t+n[1]+0.02); g.gain.exponentialRampToValueAtTime(0.0001,t+n[1]+0.22);
    o.connect(g); g.connect(c.destination); o.start(t+n[1]); o.stop(t+n[1]+0.24); }); }
- // ---------- barre d'actions ----------
  var qscore=root.querySelector('.qscore'), bestEl=null, sndBtn=null;
  if(qscore){
   var rrow=document.createElement('div'); rrow.className='qactions';
@@ -377,6 +378,7 @@
  }
  function renderBest(){ if(bestEl) bestEl.innerHTML = best>0 ? ('\ud83c\udfc6 Record : <b>'+best+'/'+total+'</b>') : ''; }
  function okText(q){ var ok=q.querySelector('input[data-ok]'); return ok?ok.parentNode.textContent.trim():'?'; }
+ function norm(s){ return (s||'').replace(/\s+/g,'').toLowerCase(); }
  function confetti(){
   var box=document.createElement('div'); box.className='confetti-wrap';
   var cols=['#f472b6','#a855f7','#22c55e','#fbbf24','#38bdf8','#fb7185'];
@@ -391,8 +393,9 @@
   var rev=root.querySelector('.reveal'); if(rev) rev.open=false;
  }
  function clearQ(q){
-  q.classList.remove('gd','bd');
+  q.classList.remove('gd','bd','locked');
   [].slice.call(q.querySelectorAll('label')).forEach(function(l){l.classList.remove('pick','right');});
+  [].slice.call(q.querySelectorAll('input')).forEach(function(inp){inp.disabled=false;});
   var v=q.querySelector('.verdict'); if(v) v.style.display='none';
  }
  function shuffle(){
@@ -414,9 +417,13 @@
    a++; var ok=sel.hasAttribute('data-ok'); if(ok)c++;
    sel.closest('label').classList.add('pick');
    var right=q.querySelector('input[data-ok]'); if(right) right.closest('label').classList.add('right');
-   q.classList.add(ok?'gd':'bd');
+   q.classList.add(ok?'gd':'bd','locked');
+   [].slice.call(q.querySelectorAll('input')).forEach(function(inp){inp.disabled=true;}); // verrouillage
+   var ans=okText(q), exp=q.getAttribute('data-exp')||'';
+   var showExp = exp && norm(exp)!==norm(ans);
    var v=q.querySelector('.verdict'); if(!v){v=document.createElement('div');v.className='verdict';q.appendChild(v);}
-   v.innerHTML = ok ? '\u2705 Bonne r\u00e9ponse !' : ('\u274c Faux \u2014 bonne r\u00e9ponse : <b>'+okText(q)+'</b>');
+   if(ok){ v.innerHTML='\u2705 Bonne r\u00e9ponse !'+(showExp?' <span class="ex">('+exp+')</span>':''); }
+   else { v.innerHTML='\u274c Faux \u2014 bonne r\u00e9ponse : <b>'+ans+'</b>'+(showExp?' <span class="ex">\u2014 '+exp+'</span>':''); }
    v.style.display='block';
   });
   var p=a?Math.round(c/a*100):0;
